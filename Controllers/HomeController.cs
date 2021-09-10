@@ -3,28 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using interart.Models;
 
-namespace interart2.Controllers
+namespace interart.Controllers
 {
     public class HomeController : Controller
     {
         public ActionResult Index()
         {
-            return View();
+            var func = new FuncionarioModel();
+            return View(func);
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
     }
 }

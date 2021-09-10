@@ -1,0 +1,27 @@
+﻿@model interart.Models.ClienteModel
+@{
+    ViewBag.Title = "Listar clientes";
+}
+
+<h2>Listar clientes</h2>
+<fieldset>
+    <legend>Lista de clientes</legend>
+    <div class="editor-label"><b> @Html.DisplayNameFor(m => m.cliNome) </b></div>
+    <div class="editor-field"> @Html.DisplayFor(m => m.cliNome) </div>
+
+    <div class="editor-label"><b> @Html.DisplayNameFor(m => m.cliCPF) </b></div>
+    <div class="editor-field"> @Html.DisplayFor(m => m.cliCPF)  </div>
+
+    <div class="editor-label"><b> @Html.DisplayNameFor(m => m.cliNasc) </b></div>
+    <div class="editor-field"> @Html.DisplayFor(m => m.cliNasc) </div>
+
+    <div class="editor-label"><b> @Html.DisplayNameFor(m => m.cliEmail) </b></div>
+    <div class="editor-field"> @Html.DisplayFor(m => m.cliEmail)  </div>
+
+    <div class="editor-label"><b> @Html.DisplayNameFor(m => m.cliCel) </b></div>
+    <div class="editor-field"> @Html.DisplayFor(m => m.cliCel)</div>
+
+    <div class="editor-label"><b> @Html.DisplayNameFor(m => m.cliEnd) </b></div>
+    <div class="editor-field"> @Html.DisplayFor(m => m.cliEnd) </div>
+</fieldset>
+

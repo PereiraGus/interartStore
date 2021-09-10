@@ -1,0 +1,83 @@
+﻿@model interart.Models.JogosModel
+@{
+    ViewBag.Title = "Jogos";
+}
+
+<h2>Cadastrar jogos</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Formulário de cadastro de jogos</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.gameCod)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.gameCod)
+            @Html.ValidationMessageFor(m => m.gameCod)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.gameNome)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.gameNome)
+            @Html.ValidationMessageFor(m => m.gameNome)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.gameVer)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.gameVer)
+            @Html.ValidationMessageFor(m => m.gameVer)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.gameDev)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.gameDev)
+            @Html.ValidationMessageFor(m => m.gameDev)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.gameGen)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.gameGen)
+            @Html.ValidationMessageFor(m => m.gameGen)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.gameAge)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.gameAge)
+            @Html.ValidationMessageFor(m => m.gameAge)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.gameYear)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.gameYear)
+            @Html.ValidationMessageFor(m => m.gameYear)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.gameSinop)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.gameSinop)
+            @Html.ValidationMessageFor(m => m.gameSinop)
+        </div>
+
+        <div>
+            <br /> <input type="submit" value="Enviar" />
+        </div>
+
+    </fieldset>
+}
+

@@ -1,0 +1,33 @@
+﻿@model interart.Models.JogosModel
+@{
+    ViewBag.Title = "Listar jogos";
+}
+
+<h2>Listar clientes</h2>
+<fieldset>
+    <legend>Lista de clientes</legend>
+    <div class="editor-label"><b> @Html.DisplayNameFor(m => m.gameCod) </b></div>
+    <div class="editor-field"> @Html.DisplayFor(m => m.gameCod) </div>
+
+    <div class="editor-label"><b> @Html.DisplayNameFor(m => m.gameNome) </b></div>
+    <div class="editor-field"> @Html.DisplayFor(m => m.gameNome)  </div>
+
+    <div class="editor-label"><b> @Html.DisplayNameFor(m => m.gameVer) </b></div>
+    <div class="editor-field"> @Html.DisplayFor(m => m.gameVer) </div>
+
+    <div class="editor-label"><b> @Html.DisplayNameFor(m => m.gameDev) </b></div>
+    <div class="editor-field"> @Html.DisplayFor(m => m.gameDev)  </div>
+
+    <div class="editor-label"><b> @Html.DisplayNameFor(m => m.gameGen) </b></div>
+    <div class="editor-field"> @Html.DisplayFor(m => m.gameGen)</div>
+
+    <div class="editor-label"><b> @Html.DisplayNameFor(m => m.gameAge) </b></div>
+    <div class="editor-field"> @Html.DisplayFor(m => m.gameAge) </div>
+
+    <div class="editor-label"><b> @Html.DisplayNameFor(m => m.gameYear) </b></div>
+    <div class="editor-field"> @Html.DisplayFor(m => m.gameYear) </div>
+
+    <div class="editor-label"><b> @Html.DisplayNameFor(m => m.gameSinop) </b></div>
+    <div class="editor-field"> @Html.DisplayFor(m => m.gameSinop) </div>
+</fieldset>
+

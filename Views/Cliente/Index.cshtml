@@ -1,0 +1,66 @@
+﻿@model interart.Models.ClienteModel
+@{
+    ViewBag.Title = "Cliente";
+}
+
+<h2>Cadastrar clientes</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Formulário de cadastro de clientes</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.cliNome)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.cliNome)
+            @Html.ValidationMessageFor(m => m.cliNome)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(c => c.cliCPF)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.cliCPF)
+            @Html.ValidationMessageFor(m => m.cliCPF)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.cliNasc)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.cliNasc)
+            @Html.ValidationMessageFor(m => m.cliNasc)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.cliEmail)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.cliEmail)
+            @Html.ValidationMessageFor(m => m.cliEmail)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.cliCel)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.cliCel)
+            @Html.ValidationMessageFor(m => m.cliCel)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.cliEnd)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.cliEnd)
+            @Html.ValidationMessageFor(m => m.cliEnd)
+        </div>
+
+        <div>
+            <br /> <input type="submit" value="Enviar" />
+        </div>
+
+    </fieldset>
+}
