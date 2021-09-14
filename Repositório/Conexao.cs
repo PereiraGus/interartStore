@@ -8,7 +8,7 @@ namespace interart2.Repositório
 {
     public class Conexao
     {
-        MySqlConnection cn = new MySqlConnection("Server=localhost;DataBase=DBINTERART;user=root;pwd=Negocios1.");
+        MySqlConnection cn = new MySqlConnection("Server=localhost;DataBase=dbinterart;user=root;pwd=Negocios1.");
         public static string msg;
         public MySqlConnection ConnectBD()
         {

@@ -23,7 +23,7 @@ namespace interart.Models
 
         [Display(Name = "RG do funcionário:")]
         [Required(ErrorMessage = "Informe o RG do funcionário.")]
-        public int funcRG { get; set; }
+        public string funcRG { get; set; }
 
         [Display(Name = "Data de nascimento do funcionário:")]
         [Required(ErrorMessage = "Infome a data de nascimento do funcionário.")]
