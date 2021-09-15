@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 
-namespace interart.Models
+namespace interart2.Models
 {
     public class FuncionarioModel
     {

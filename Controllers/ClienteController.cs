@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using interart.Models;
+using interart2.Models;
+using interart2.Repositório;
 
-namespace interart.Controllers
+namespace interart2.Controllers
 {
     public class ClienteController : Controller
     {
@@ -15,15 +16,15 @@ namespace interart.Controllers
             var cliente = new ClienteModel();
             return View(cliente);
         }
+        Acoes ac = new Acoes();
 
         [HttpPost]
         public ActionResult Index (ClienteModel cliente)
         {
-            if(ModelState.IsValid)
-            {
-                return View("Listar", cliente);
-            }
+            ac.CadastrarCliente(cliente);
             return View(cliente);
         }
+
+
     }
 }

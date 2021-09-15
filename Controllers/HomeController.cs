@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using interart.Models;
+using interart2.Models;
 
-namespace interart.Controllers
+namespace interart2.Controllers
 {
     public class HomeController : Controller
     {

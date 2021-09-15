@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using interart.Models;
+using interart2.Models;
+using interart2.Repositório;
 
-namespace interart.Controllers
+namespace interart2.Controllers
 {
     public class FuncionarioController : Controller
     {
@@ -15,14 +16,12 @@ namespace interart.Controllers
             var funcionario = new FuncionarioModel();
             return View(funcionario);
         }
+        Acoes ac = new Acoes();
 
         [HttpPost]
         public ActionResult Index (FuncionarioModel funcionario)
         {
-            if(ModelState.IsValid)
-            {
-                return View("Listar", funcionario);
-            }
+            ac.CadastrarFuncionario(funcionario);
             return View(funcionario);
         }
     }
