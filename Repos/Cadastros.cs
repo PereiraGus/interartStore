@@ -50,14 +50,57 @@ namespace interartStore.Repos
             cmd.Parameters.Add("@gameSinop", MySqlDbType.VarChar).Value = gam.gameSinop;
         }
 
-        public Cliente ListarCliCod(int cod)
+        public Cliente ListarCliCPF(string CPF)
         {
-            var comando = String.Format("select * from Funcionario where func")
+            var comando = String.Format("select * from tbCli where cliCPF = {0}", CPF);
+            MySqlCommand cmd = new MySqlCommand(comando, con.ConnectBD());
+            var DadosCliCPF = cmd.ExecuteReader();
+            return ListarCliCPF(DadosCliCPF).FirstOrDefault();
         }
 
-        public List<Cliente> ListarCli(MySqlDataReader dt)
+        public List<Cliente> ListarCliCPF(MySqlDataReader dt)
         {
+            var AtAl = new List<Cliente>();
+            while(dt.Read())
+            {
+                var AlTemp = new Cliente()
+                {
+                    cliNome = dt["cliNome"].ToString(),
+                    cliCPF = dt["cliCPF"].ToString(),
+                    cliNasc = DateTime.Parse(dt["cliNasc"].ToString()),
+                    cliEmail = dt["cliEmail"].ToString(),
+                    cliEnd = dt["cliEnd"].ToString(),
+                };
+                AtAl.Add(AlTemp);
+            }
+            dt.Close();
+            return AtAl;
+        }
 
+        public List<Cliente> ListarClientes()
+        {
+            MySqlCommand cmd = new MySqlCommand("select * from tbcli", con.ConnectBD());
+            var DadosCli = cmd.ExecuteReader();
+            return ListarTodosCli(DadosCli);
+        }
+
+        public List<Cliente> ListarTodosCli(MySqlDataReader dt)
+        {
+            var TodosCli = new List<Cliente>();
+            while (dt.Read())
+            {
+                var CliTemp = new Cliente()
+                {
+                    cliNome = dt["cliNome"].ToString(),
+                    cliCPF = dt["cliCPF"].ToString(),
+                    cliNasc = DateTime.Parse(dt["cliNasc"].ToString()),
+                    cliEmail = dt["cliEmail"].ToString(),
+                    cliEnd = dt["cliEnd"].ToString(),
+                };
+                TodosCli.Add(CliTemp);
+            }
+            dt.Close();
+            return TodosCli;
         }
     }
 }

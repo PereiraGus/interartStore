@@ -1,0 +1,48 @@
+﻿@model IEnumerable<interartStore.Models.Cliente>
+@{
+    ViewBag.Title = "Listar clientes";
+}
+
+<p>@Html.ActionLink("Cadastrar Clientes", "Cli")</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(m => m.cliNome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.cliCPF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.cliNasc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.cliEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.cliEnd)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayNameFor(m => m.cliNome)
+            </td>
+            <td>
+                @Html.DisplayNameFor(m => m.cliCPF)
+            </td>
+            <td>
+                @Html.DisplayNameFor(m => m.cliNasc)
+            </td>
+            <td>
+                @Html.DisplayNameFor(m => m.cliEmail)
+            </td>
+            <td>
+                @Html.DisplayNameFor(m => m.cliEnd)
+            </td>
+        </tr>
+    }
+</table>
+
