@@ -1,15 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-</head>
-<body>
-    <!DOCTYPE html>
-    <html>
+
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,9 +27,9 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list"></span>&nbspCadastrar <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li>@Html.ActionLink("Funcionário", "Index", "Func")</li>
-                                <li>@Html.ActionLink("Cliente", "Contact", "Home")</li>
-                                <li>@Html.ActionLink("Jogos", "Index", "Game")</li>
+                                <li>@Html.ActionLink("Funcionário", "Funcionario", "Home")</li>
+                                <li>@Html.ActionLink("Cliente", "Cliente", "Home")</li>
+                                <li>@Html.ActionLink("Jogos", "Game", "Home")</li>
                             </ul>
                         </li>
                     </ul>

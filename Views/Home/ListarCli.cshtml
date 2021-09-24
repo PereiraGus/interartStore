@@ -3,7 +3,8 @@
     ViewBag.Title = "Listar clientes";
 }
 
-<p>@Html.ActionLink("Cadastrar Clientes", "Cli")</p>
+<br />
+<p>@Html.ActionLink("Cadastrar novamente", "Cliente")</p>
 
 <table class="table">
     <tr>
@@ -28,19 +29,25 @@
     {
         <tr>
             <td>
-                @Html.DisplayNameFor(m => m.cliNome)
+                @Html.DisplayFor(modelItem => item.cliNome)
             </td>
             <td>
-                @Html.DisplayNameFor(m => m.cliCPF)
+                @Html.DisplayFor(modelItem => item.cliCPF)
             </td>
             <td>
-                @Html.DisplayNameFor(m => m.cliNasc)
+                @Html.DisplayFor(modelItem => item.cliNasc)
             </td>
             <td>
-                @Html.DisplayNameFor(m => m.cliEmail)
+                @Html.DisplayFor(modelItem => item.cliEmail)
             </td>
             <td>
-                @Html.DisplayNameFor(m => m.cliEnd)
+                @Html.DisplayFor(modelItem => item.cliEnd)
+            </td>
+            <td>
+                @Html.ActionLink("Alterar", "AltCli", null, new 
+            { cliCPF = item.cliCPF }, new { @class = "btn btn-primary btn-xs" })
+                @Html.ActionLink("Deletar", "DelCli", null, new 
+            { cliCPF = item.cliCPF }, new { @class = "btn btn-danger btn-xs" })
             </td>
         </tr>
     }

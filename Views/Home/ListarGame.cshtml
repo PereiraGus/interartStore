@@ -1,0 +1,73 @@
+﻿@model IEnumerable<interartStore.Models.Game>
+@{
+    ViewBag.Title = "Listar jogos";
+}
+
+<br />
+<p>@Html.ActionLink("Cadastrar novamente", "Game")</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(m => m.gameCod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.gameNome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.gameVer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.gameDev)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.gameGen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.gameAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.gameYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.gameSinop)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.gameCod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gameNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gameVer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gameDev)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gameGen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gameAge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gameYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gameSinop)
+            </td>
+            <td>
+                @Html.ActionLink("Alterar", "AltGame", null, new
+            { cliCPF = item.gameCod }, new { @class = "btn btn-primary btn-xs" })
+                @Html.ActionLink("Deletar", "DelGame", null, new
+            { cliCPF = item.gameCod }, new { @class = "btn btn-danger btn-xs" })
+            </td>
+        </tr>
+    }
+</table>
+

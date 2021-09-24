@@ -4,7 +4,7 @@
 }
 
 <h2>Cadastrar jogos</h2>
-@using (Html.BeginForm())
+@using (Html.BeginForm("CadGame", "Home", FormMethod.Post))
 {
     @Html.ValidationSummary(true)
     <fieldset>
@@ -80,4 +80,3 @@
 
     </fieldset>
 }
-

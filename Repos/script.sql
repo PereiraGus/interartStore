@@ -5,7 +5,7 @@ use dbinterart;
 create table tbCli(
 cliNome varchar(50) not null,
 cliCPF char(14) primary key,
-cliNasc char(19) not null,
+cliNasc char(10) not null,
 cliEmail varchar(50) not null unique,
 cliEnd varchar(55) not null
 );
@@ -15,6 +15,7 @@ funcCod int primary key,
 funcNome varchar(50) not null,
 funcCPF char(14) unique not null,
 funcRG char(12) not null,
+funcNasc char(10) not null,
 funcEnd varchar(55) not null,
 funcCel char(15) not null unique,
 funcEmail varchar(50) not null unique,

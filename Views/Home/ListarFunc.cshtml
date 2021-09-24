@@ -1,0 +1,73 @@
+﻿@model IEnumerable<interartStore.Models.Funcionario>
+@{
+    ViewBag.Title = "Listar funcionarios";
+}
+
+<br />
+<p>@Html.ActionLink("Cadastrar novamente", "Funcionario")</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(m => m.funcCod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.funcNome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.funcCPF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.funcRG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.funcEnd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.funcCel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.funcEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.funcCarg)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.funcCod)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.funcNome)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.funcCPF)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.funcRG)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.funcEnd)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.funcCel)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.funcEmail)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.funcCarg)
+    </td>
+    <td>
+        @Html.ActionLink("Alterar", "AltFunc", null, new
+    { cliCPF = item.funcCod }, new { @class = "btn btn-primary btn-xs" })
+        @Html.ActionLink("Deletar", "DelFunc", null, new
+    { cliCPF = item.funcCod }, new { @class = "btn btn-danger btn-xs" })
+    </td>
+</tr>
+    }
+</table>
+

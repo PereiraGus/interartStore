@@ -4,7 +4,7 @@
 }
 
 <h2>Cadastrar clientes</h2>
-@using (Html.BeginForm())
+@using (Html.BeginForm("CadCli", "Home", FormMethod.Post))
 {
     @Html.ValidationSummary(true)
     <fieldset>
@@ -59,7 +59,7 @@
         </div>
 
         <div>
-            <br /> <input type="submit" value="Enviar" />
+            <br /> <input type="submit" value="Cadastrar" name="btnenviar" />
         </div>
 
     </fieldset>

@@ -25,10 +25,6 @@ namespace interartStore.Models
         [Required(ErrorMessage = "Informe o RG do funcionário.")]
         public string funcRG { get; set; }
 
-        [Display(Name = "Data de nascimento do funcionário:")]
-        [Required(ErrorMessage = "Infome a data de nascimento do funcionário.")]
-        public DateTime funcNasc { get; set; }
-
         [Display(Name = "Endereço do funcionário:")]
         [Required(ErrorMessage = "Informe o endereço do funcionário.")]
         public string funcEnd { get; set; }

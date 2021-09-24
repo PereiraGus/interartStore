@@ -19,7 +19,7 @@ namespace interartStore.Models
 
         [Display(Name = "Data de nascimento do cliente:")]
         [Required(ErrorMessage = "Informe a data de nascimento do cliente.")]
-        public DateTime cliNasc { get; set; }
+        public string cliNasc { get; set; }
 
         [Display(Name = "Email do cliente:")]
         [Required(ErrorMessage = "Informe o email do cliente.")]

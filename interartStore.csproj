@@ -121,9 +121,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\ClienteCtrl.cs" />
-    <Compile Include="Controllers\FuncionarioCtrl.cs" />
-    <Compile Include="Controllers\GameCtrl.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -170,11 +167,15 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Func\Index.cshtml" />
-    <Content Include="Views\Game\Index.cshtml" />
-    <Content Include="Views\Cli\Index.cshtml" />
-    <Content Include="Views\Cli\CadCli.cshtml" />
-    <Content Include="Views\Cli\ListarCli.cshtml" />
+    <Content Include="Views\Home\Funcionario.cshtml" />
+    <Content Include="Views\Home\Cliente.cshtml" />
+    <Content Include="Views\Home\CadCli.cshtml" />
+    <Content Include="Views\Home\ListarCli.cshtml" />
+    <Content Include="Views\Home\Game.cshtml" />
+    <Content Include="Views\Home\CadFunc.cshtml" />
+    <Content Include="Views\Home\ListarFunc.cshtml" />
+    <Content Include="Views\Home\CadGame.cshtml" />
+    <Content Include="Views\Home\ListarGame.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
